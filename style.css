@@ -1,0 +1,147 @@
+/* Base navigation */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c0d6d442;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+/* Resume Content */
+.Resume {
+  padding: 0px 11px;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.name img {
+  width: 100px;
+  padding: 11px 120px;
+}
+
+.Edu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sepration {
+  color: black;
+  height: 1px;
+  background-color: black;
+}
+
+.Ename, .mail, .Gen, .phone, .Submit, .about {
+  padding: 5px 10px;
+  align-items: center;
+  line-height: 25px;
+}
+
+.Submit {
+  padding: 20px 90px;
+  color: green;
+}
+
+h1 {
+  padding: 15px 1px;
+}
+
+/* Responsive Design Begins Here */
+
+/* Tablets and smaller laptops (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .name, .Edu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .name img {
+    padding: 10px 20px;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .Submit {
+    padding: 10px 30px;
+  }
+}
+
+/* Mobile Phones (≤ 767px) */
+@media screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-link {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #83a6ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 999;
+  }
+
+  .nav-link.show {
+    display: flex;
+  }
+
+  .name, .Edu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .name img {
+    width: 80px;
+    padding: 10px 10px;
+  }
+
+  .Submit {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .about {
+    padding: 0px 10px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+}

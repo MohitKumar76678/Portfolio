@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-link" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Contact</h1>
+    <form action="thanks.html">
+        <div class="Ename">
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Enter Name"><br>
+        </div>
+        <div class="mail">
+            <label for="E-mail">E-mail :</label>
+            <input type="email" id="E-mail" placeholder="Enter E-mail"><br>
+        </div>
+        <div class="Gen">
+            <label for="Gender">Gender :</label><br>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Male">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="Female"><br>
+        </div>
+        <div class="phone">
+            <label for="number">Phone No. :</label>
+            <input type="text" id="number" placeholder="Enter Phone Number"><br>
+        </div>
+        <div class="Submit">
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("nav-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
